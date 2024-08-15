@@ -1,0 +1,379 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: #f0f0f0;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #ff4081, #ff6e40);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero-section button {
+    background: #FFD700;
+    border: none;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: bounceIn 2s ease-out;
+    transition: background 0.3s ease;
+}
+
+.hero-section button:hover {
+    background: #FFC107;
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #007BFF;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.sub-section {
+    margin: 1rem 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.service {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service i {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+}
+
+.service h3 {
+    margin: 0.5rem 0;
+}
+
+.service p {
+    font-size: 0.9rem;
+}
+
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem; /* Increased gap for better spacing */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Slightly larger border-radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition */
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease; /* Smooth zoom effect */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Larger zoom effect on hover */
+}
+
+/* Additional Styles for Improved Layout */
+section#gallery {
+    padding: 2rem;
+    background: #f0f0f0; /* Light background for contrast */
+}
+
+section#gallery h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem; /* Larger heading font size */
+    color: #333; /* Darker color for better readability */
+}
+
+/* Contact Form */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* About Section Styles */
+.about-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-card {
+    background: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff7e5f;
+}
+
+.about-card p {
+    font-size: 1rem;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 4rem 2rem;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.contact-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input[type="submit"] {
+    background: #6a11cb;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #2575fc;
+    transform: translateY(-5px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
