@@ -32,17 +32,14 @@ To get a local copy up and running, follow these steps:
 Clone the repository:
 
 bash
-Copy code
 git clone https://github.com/your-username/mk-tourist-website.git
 Navigate to the project directory:
 
 bash
-Copy code
 cd mk-tourist-website
 Open the index.html file in your web browser:
 
 bash
-Copy code
 open index.html
 Usage
 This website can be used as a template for creating a tourist company’s website. The HTML and CSS files are well-structured, making it easy to customize the content and design to fit your specific needs.
